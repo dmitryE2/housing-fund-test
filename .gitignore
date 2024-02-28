@@ -1,0 +1,11 @@
+dist
+node_modules
+coverage
+.yarn
+.yarn.lock
+.yarnrc
+.yarnrc.yml
+package-lock.json
+mockups
+
+*.log

@@ -1,0 +1,31 @@
+@import '~sanitize.css';
+@import './fonts.scss';
+@import './utils.scss';
+
+body {
+  font-family: $font-base;
+  color: $text-color-base;
+  min-height: 100vh;
+  font-size: $font-size-base;
+}
+
+main {
+  padding-bottom: 58px;
+  flex-grow: 1;
+  display: flex;
+}
+
+.custom-sroll {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $border-color-gray;
+    border-radius: 6px;
+  }
+}
