@@ -9,11 +9,17 @@
                 <div class="app-user-info__contacts">
                     <div class="app-user-info__contacts-item">
                         <div class="font-bold font-sm">email:</div>
-                        <div class="color-gray font-sm">{{ user.email }}</div>
+                        <div class="color-gray font-sm">
+                            <a :href="`mailto:${user.email}`" class="app-user-info__contacts-link color-gray">{{ user.email
+                            }}</a>
+                        </div>
                     </div>
                     <div class="app-user-info__contacts-item">
                         <div class="font-bold font-sm">phone:</div>
-                        <div class="color-gray font-sm">{{ user.phone }}</div>
+                        <div class="color-gray font-sm">
+                            <a :href="`tel:${user.phone}`" class="app-user-info__contacts-link color-gray">{{ user.phone
+                            }}</a>
+                        </div>
                     </div>
                 </div>
                 <div v-if="aboutText" class="app-user-info__about">
@@ -90,6 +96,10 @@ export default {
         &:not(:last-of-type) {
             margin-bottom: 10px;
         }
+    }
+
+    &__contacts-link {
+        text-decoration: none;
     }
 
     &__about {
